@@ -23,8 +23,9 @@ userRouter.post("/register",async(req,res)=>{
         bcrypt.hash(password,3,async(err,hash)=>{
             const NewUser= new userModel({name,email,password:hash})
             await NewUser.save()
+            res.status(201).send({msg:"registration succesfull",NewUser})
         })
-        res.status(201).send({msg:"registration succesfull"})
+        
     } catch (err) {
         res.status(401).send({msg:err.message})
     }
@@ -69,7 +70,7 @@ userRouter.post("/logout",async(req,res)=>{
 
 
             res.clearCookie('token');
-            res.status(200).send({ msg: 'Logout successful' });
+            res.status(200).send({ msg: 'Logout successful' ,TokenBlacklisted});
         } else {
             return res.status(401).send({ msg: 'Invalid token' });
         }
