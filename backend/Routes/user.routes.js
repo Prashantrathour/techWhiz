@@ -41,7 +41,7 @@ userRouter.post("/login", async (req, res) => {
 //         return res.status(401).send({ error: "login failed" });
 //       }
 //       if (result) {
-//         const token = jwt.sign({ userID: user._id }, "jammi", {
+//         const token = jwt.sign({ userID: user._id }, process.env.SECRET, {
 //           expiresIn: "1hr",
 //         });
 //         res.cookie("token", token, { maxAge: 24 * 60 * 60 });
@@ -61,10 +61,11 @@ userRouter.post("/login", async (req, res) => {
         if (user) {
           bcrypt.compare(password, user.password, (err, result) => {
             if (result) {
-                const token = jwt.sign({ userID: user._id }, "jammi", {
+                const token = jwt.sign({ userID: user._id }, process.env.SECRET, {
                     expiresIn: "1hr",
                   });
                   res.cookie("token", token, { maxAge: 24 * 60 * 60 });
+              
                   res.status(201).send({ msg: "login succesfull", token });
             } else {
                 res.status(400).json({ msg: "Wrong Credentials" });
