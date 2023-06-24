@@ -41,10 +41,12 @@ const SoftSkills = () => {
     <div className="container mx-auto py-8 mt-24">
       <div className="max-w-lg mx-auto">
         <div className="bg-white rounded-lg shadow-lg">
-          <div className="p-4">
+          <div className="p-4 text-green-400">
+            <h1 className="p-4 text-green-400">Ask Your Soft Skills Questions</h1>
             <div className="mb-4">
               {messages.map((message, index) => (
                 <div
+                
                   key={index}
                   className={`mb-2 p-2 ${
                     message.isUserMessage ? 'bg-blue-500 text-white' : 'bg-gray-200'
@@ -59,8 +61,8 @@ const SoftSkills = () => {
                 type="text"
                 value={inputText}
                 onChange={handleInputTextChange}
-                placeholder="Type your message..."
-                className="w-full border rounded-lg px-3 py-2 outline-none focus:shadow-outline"
+                placeholder="Type your message..." 
+                className="w-full border rounded-lg px-3 py-2 outline-none focus:shadow-outline  text-green-400"
               />
               <button
                 type="submit"
@@ -69,6 +71,9 @@ const SoftSkills = () => {
                 Send
               </button>
             </form>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 520" style={{ position: "absolute", top: 80, left: 0, zIndex: -1, height:"" }}>
+            <path fill="#a2d9ff" fill-opacity="1" d="M0,192L40,192C80,192,160,192,240,181.3C320,171,400,149,480,128C560,107,640,85,720,69.3C800,53,880,43,960,74.7C1040,107,1120,181,1200,192C1280,203,1360,149,1400,122.7L1440,96L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
+            </svg>
           </div>
         </div>
       </div>
