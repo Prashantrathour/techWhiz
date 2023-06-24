@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate ,Link} from 'react-router-dom';
 import Button from './Button';
 import axios from 'axios';
 
@@ -27,7 +27,7 @@ const Signup = () => {
     };
 
     try {
-      const response = await axios.post('http://localhost:5038/user/register', obj);
+      const response = await axios.post('http://localhost:8080/user/register', obj);
 
       const { data } = response;
       console.log(data);
@@ -95,6 +95,7 @@ const Signup = () => {
         {error && <p className={!success?"text-red-500 mb-4":"text-green-500 mb-4"}>{error}</p>}
         <div className="flex items-center justify-between">
           <Button type="submit">Sign Up</Button>
+          <Link to='/login' className='text-red-500 '>Already a member please Login</Link>
         </div>
       </form>
     </div>

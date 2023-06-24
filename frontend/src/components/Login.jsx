@@ -115,15 +115,15 @@ const Login = () => {
     };
 
     try {
-      const response = await axios.post('http://localhost:5038/user/login', obj);
-
+      const response = await axios.post('http://localhost:8080/user/login', obj);
+        console.log(response)
       const { data } = response;
       console.log(data.token);
       localStorage.setItem('token', JSON.stringify(data.token));
       console.log('Login successful');
       setTimeout(() => {
-        
-        navigate('/');
+        navigate('/softskills');
+        window.location.reload(false);
       }, 1000);
     } catch (err) {
       console.log(err.response.data.msg);

@@ -1,7 +1,7 @@
 const mongoose=require("mongoose")
 
-// require("dotenv").config()
+require("dotenv").config()
 
-const config=mongoose.connect("mongodb://localhost:27017/Hekcathon")
+const config=mongoose.connect(process.env.mongoUrl)
 
 module.exports={config}
