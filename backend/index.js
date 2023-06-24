@@ -3,7 +3,7 @@ const { config } = require("./config/db")
 const { userRouter } = require("./Routes/user.routes")
 
 const { auth } = require("./middleware/auth")
-const cors =require("cors")
+
 const cookieParser = require('cookie-parser');
 const { DataRouter } = require("./Routes/Data.routes");
 const cors=require("cors")
