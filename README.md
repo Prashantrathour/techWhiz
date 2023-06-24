@@ -93,3 +93,15 @@ This project is licensed under the MIT License.
 
 
 Thank you for using Interview Preparation IA! We hope this tool helps you excel in your job interviews. Good luck!
+# Homepage
+![Screenshot (133)](https://github.com/Prashantrathour/techWhiz/assets/115496998/18a833a5-4a47-4e75-beb4-1eba2b122271)
+# Sign Up
+![Screenshot (134)](https://github.com/Prashantrathour/techWhiz/assets/115496998/0e0d1ecd-2346-496e-84c1-0f4a6250b178)
+# Login Page
+![Screenshot (135)](https://github.com/Prashantrathour/techWhiz/assets/115496998/af2407da-535c-4a99-9e83-49387b6029e0)
+# Interview Page
+![Screenshot (136)](https://github.com/Prashantrathour/techWhiz/assets/115496998/8e2785b7-e480-49ac-85db-680e6295d21d)
+
+
+
+
